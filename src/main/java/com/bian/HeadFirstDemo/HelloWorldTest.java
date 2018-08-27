@@ -4,7 +4,7 @@ package com.bian.HeadFirstDemo;
  * Hello world!
  *
  */
-public class App 
+public class HelloWorldTest 
 {
     public static void main( String[] args )
     {
