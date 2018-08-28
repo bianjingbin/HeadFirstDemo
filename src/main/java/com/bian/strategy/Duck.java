@@ -8,11 +8,19 @@
  * Id: Duck.java,v3.0 2018年8月27日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.day01;
+package com.bian.strategy;
 
 public class Duck {
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
+	
+	public void setFlyBehavior(FlyBehavior fb) {
+		flyBehavior=fb;
+	}
+	
+	public void setQuackBehavior(QuackBehavior qb) {
+		quackBehavior=qb;
+	}
 	
 	public void perfromQuack() {
 		quackBehavior.quack();

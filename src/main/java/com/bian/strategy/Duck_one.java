@@ -8,7 +8,7 @@
  * Id: Duck_one.java,v3.0 2018年8月27日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.day01;
+package com.bian.strategy;
 
 public class Duck_one extends Duck implements FlyBehavior,QuackBehavior{
 	public void display() {

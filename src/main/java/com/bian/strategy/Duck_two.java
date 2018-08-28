@@ -8,7 +8,7 @@
  * Id: Duck_one.java,v3.0 2018年8月27日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.day01;
+package com.bian.strategy;
 
 public class Duck_two extends Duck{
 	public Duck_two() {
@@ -20,7 +20,9 @@ public class Duck_two extends Duck{
 	}
 	
 	public static void main(String[] args) {
-		Duck_two d=new Duck_two();
+		Duck d=new Duck_two();
+		d.setFlyBehavior(new FlyRocketPower());
+		d.performFly();
 		d.perfromQuack();
 		d.display();
 		d.swim();
