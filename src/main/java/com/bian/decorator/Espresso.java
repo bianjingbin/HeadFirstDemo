@@ -20,7 +20,17 @@ public class Espresso extends Beverage{
 	public double cost() {
 		return 1.99;
 	}
-	
+
+	@Override
+	public int getSize() {
+		return 0;
+	}
+
+	@Override
+	public int setSize(int i) {
+		return i;
+	}
+
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

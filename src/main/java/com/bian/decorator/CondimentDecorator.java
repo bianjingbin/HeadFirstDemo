@@ -11,7 +11,12 @@
 package com.bian.decorator;
 
 public abstract class CondimentDecorator extends Beverage{
+
 	public abstract String getDescription();
+	
+	public abstract int getSize();
+	
+	public abstract int setSize(int i);
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

@@ -11,6 +11,10 @@
 package com.bian.decorator;
 
 public abstract class Beverage {
+	public static final int SMALL=1;
+	public static final int MIDDLE=2;
+	public static final int LARGE=3;
+	
 	String description="Unknown Beverage";
 	
 	public String getDescription() {
@@ -18,6 +22,11 @@ public abstract class Beverage {
 	}
 	
 	public abstract double cost();
+	
+	public abstract int getSize();
+	
+	public abstract int setSize(int i);
+
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

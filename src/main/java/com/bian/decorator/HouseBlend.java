@@ -20,6 +20,18 @@ public class HouseBlend extends Beverage{
 	public double cost() {
 		return .89;
 	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int setSize(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
 

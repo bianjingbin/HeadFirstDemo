@@ -26,6 +26,18 @@ public class Whip extends CondimentDecorator{
 	public double cost() {
 		return .15+beverage.cost();
 	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int setSize(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
 

@@ -20,6 +20,19 @@ public class Decat extends Beverage{
 	public double cost() {
 		return 1.05;
 	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int setSize(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */
