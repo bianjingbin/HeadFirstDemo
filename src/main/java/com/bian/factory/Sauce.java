@@ -3,20 +3,16 @@
  * (C)2018 Shanghai KingstarWinning Corporation. All rights reserved.
  * 项目名称： 规则引擎
  * 系统名称： ENGINE3.0
- * 文件名称： Order.java
+ * 文件名称： Dough.java
  * 注意事项：
- * Id: Order.java,v3.0 2018年9月20日 bianjingbin Exp
+ * Id: Dough.java,v3.0 2018年10月24日 bianjingbin Exp
  * ==============================================
  */
 package com.bian.factory;
 
-public class Order {
-
-	public static void main(String[] args) {
-		PizzaStore nyps=new NYStylePizzaStore();
-		nyps.orderPizza("cheese");
-		//Veggies veggies[]= {new Carrot() , new RomaineLettuce()};
-		//System.out.println(veggies);
+public class Sauce {
+	public Sauce() {
+		System.out.println("我是酱汁");
 	}
 }
 
