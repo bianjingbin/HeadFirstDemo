@@ -11,17 +11,17 @@
 package com.bian.factory;
 
 public class SimplePizzaFactory {
-	public Pizza createPizza(String type) {
-		Pizza pizza=null;
-		if(type.equals("cheese")) {
-			pizza= new CheesePizza();
-		}else if(type.equals("pepperoni")) {
-			pizza=new PepperoniPizza();
-		}else if(type.equals("veggie")) {
-			pizza=new VeggiePizza();
-		}
-		return pizza;
-	}
+//	public Pizza createPizza(String type) {
+//		Pizza pizza=null;
+//		if(type.equals("cheese")) {
+//			pizza= new CheesePizza();
+//		}else if(type.equals("pepperoni")) {
+//			pizza=new PepperoniPizza();
+//		}else if(type.equals("veggie")) {
+//			pizza=new VeggiePizza();
+//		}
+//		return pizza;
+//	}
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

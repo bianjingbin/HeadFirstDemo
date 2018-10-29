@@ -12,7 +12,7 @@ package com.bian.factory;
 
 public class Veggies {
 	public Veggies() {
-		System.out.println("我是蔬菜的集合");
+		System.out.println("----蔬菜----");
 	}
 }
 
