@@ -10,18 +10,17 @@
  */
 package com.bian.factory;
 
-public class ChicagoStylePizzaStore extends PizzaStore{
+public class ChicagoStylePizzaStore /*extends PizzaStore*/{
 	Pizza pizza;
 	
-	@Override
 	Pizza createPizza(String type) {
-		if(type.equals("cheese")) {
+		/*if(type.equals("cheese")) {
 			pizza= new ChicagoStyleCheesePizza();
 		}else if(type.equals("pepperoni")) {
 			pizza=new ChicagoStylePepperoniPizza();
 		}else if(type.equals("veggie")) {
 			pizza=new ChicagoStyleVeggiePizza();
-		}
+		}*/
 		return pizza;
 	}
 

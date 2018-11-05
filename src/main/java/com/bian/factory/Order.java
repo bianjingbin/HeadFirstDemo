@@ -13,10 +13,12 @@ package com.bian.factory;
 public class Order {
 
 	public static void main(String[] args) {
-		PizzaStore nyps=new NYStylePizzaStore();
-		nyps.orderPizza("cheese");
+		//PizzaStore nyps=new NYStylePizzaStore();
+		//nyps.orderPizza("cheese");
 		//Veggies veggies[]= {new Carrot() , new RomaineLettuce()};
 		//System.out.println(veggies);
+		PizzaStore ps=new NYStylePizzaStore2();
+		ps.orderPizza("veggie");
 	}
 }
 

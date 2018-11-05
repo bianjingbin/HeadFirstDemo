@@ -12,8 +12,8 @@ package com.bian.factory;
 
 public abstract class PizzaStore {
 	
-	public final Pizza orderPizza(String type) {
-		Pizza pizza;
+	public final Pizza2 orderPizza(String type) {
+		Pizza2 pizza;
 		
 		pizza=createPizza(type);
 		pizza.prepare();
@@ -23,7 +23,7 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	abstract Pizza createPizza(String type);
+	abstract Pizza2 createPizza(String type);
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

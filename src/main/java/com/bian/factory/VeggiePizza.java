@@ -10,8 +10,21 @@
  */
 package com.bian.factory;
 
-public class VeggiePizza extends Pizza{
+public class VeggiePizza extends Pizza2{
+	NYPizzaYuanLiaoFactory nyfac;
+	
+	public VeggiePizza(NYPizzaYuanLiaoFactory nyfac) {
+		this.nyfac=nyfac;
+	}
 
+	@Override
+	void prepare() {
+		System.out.println("Preparing "+ name);
+		dough=nyfac.createDough();
+		sauce=nyfac.createSauce();
+		cheese=nyfac.createCheese();
+		veggies=nyfac.createVeggies();
+	}
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

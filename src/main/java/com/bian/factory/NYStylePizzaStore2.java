@@ -13,9 +13,18 @@ package com.bian.factory;
 public class NYStylePizzaStore2 extends PizzaStore{
 
 	@Override
-	Pizza createPizza(String type) {
+	Pizza2 createPizza(String type) {
+		Pizza2 pizza = null;
+		PizzaYuanLiaoFactory pylf = new NYPizzaYuanLiaoFactory();
 		
-		return null;
+		if(type.equals("cheese")) {
+			pizza = new CheesePizza((NYPizzaYuanLiaoFactory) pylf);
+			pizza.setName("纽约风味芝士比萨!");
+		}else if(type.equals("veggie")) {
+			pizza = new VeggiePizza((NYPizzaYuanLiaoFactory) pylf);
+			pizza.setName("纽约风味蔬菜比萨!");
+		}
+		return pizza;
 	}
 	
 	
