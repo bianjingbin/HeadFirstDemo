@@ -14,6 +14,10 @@ public class GarageDoor {
 	public void open() {
 		System.out.println("开车库门");
 	}
+	
+	public void close() {
+		System.out.println("关闭车库门");
+	}
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

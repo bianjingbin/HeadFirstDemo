@@ -3,28 +3,38 @@
  * (C)2018 Shanghai KingstarWinning Corporation. All rights reserved.
  * 项目名称： 规则引擎
  * 系统名称： ENGINE3.0
- * 文件名称： LightOnCommand.java
+ * 文件名称： FanCommand.java
  * 注意事项：
- * Id: LightOnCommand.java,v3.0 2018年11月20日 bianjingbin Exp
+ * Id: FanCommand.java,v3.0 2018年11月21日 bianjingbin Exp
  * ==============================================
  */
 package com.bian.command;
 
-public class LightOffCommand implements Command {
-	Light light;
+public class FanMEDIUMCommand implements Command {
+	Fan fan;
+	int prevSpeed;
 	
-	public LightOffCommand(Light light) {
-		this.light = light;
-	}
+	public FanMEDIUMCommand(Fan fan) {
+		this.fan=fan;
+	}	
 
 	@Override
 	public void execute() {
-		light.off();
+		prevSpeed=fan.getSpeed();
+		fan.medium();
 	}
 
 	@Override
 	public void undo() {
-		light.on();
+		if(prevSpeed==Fan.HIGH) {
+			fan.high();
+		}else if(prevSpeed==Fan.MEDIUM) {
+			fan.medium();
+		}else if(prevSpeed==Fan.LOW) {
+			fan.low();
+		}else if(prevSpeed==Fan.OFF) {
+			fan.off();
+		}
 	}
 
 }

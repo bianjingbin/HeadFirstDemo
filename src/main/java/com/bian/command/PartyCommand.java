@@ -10,21 +10,23 @@
  */
 package com.bian.command;
 
-public class LightOffCommand implements Command {
-	Light light;
+public class PartyCommand implements Command {
+	Command[] commands;
 	
-	public LightOffCommand(Light light) {
-		this.light = light;
+	public PartyCommand(Command[] command) {
+		this.commands=command;
 	}
 
 	@Override
 	public void execute() {
-		light.off();
+		for (int i = 0; i < commands.length; i++) {
+			commands[i].execute();
+		}
 	}
 
 	@Override
 	public void undo() {
-		light.on();
+		
 	}
 
 }

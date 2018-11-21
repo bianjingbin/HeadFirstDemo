@@ -18,11 +18,19 @@ public class RemoteLoader {
 		Light livingRoomLight=new Light("卧室灯");
 		Light kitchenLight=new Light("厨房灯");
 		Stereo stereo=new Stereo("卧室");
+		GarageDoor gd=new GarageDoor();
+		Fan fan=new Fan("教室");
 		
 		LightOnCommand livingRoomLightOn=new LightOnCommand(livingRoomLight);
 		LightOffCommand livingRoomLightOff=new LightOffCommand(livingRoomLight);
 		LightOnCommand kitchenLightOn=new LightOnCommand(kitchenLight);
 		LightOffCommand kitchenLightOff=new LightOffCommand(kitchenLight);
+		GarageDoorOpenCommand garageDoorOpen=new GarageDoorOpenCommand(gd);
+		
+		FanHighCommand fanhigh=new FanHighCommand(fan);
+		FanMEDIUMCommand fanmedium=new FanMEDIUMCommand(fan);
+		FanLowCommand fanlow=new FanLowCommand(fan);
+		FanOFFCommand fanoff=new FanOFFCommand(fan);
 		
 		StereoOnWithCdCommand stereoOnWithCD=new StereoOnWithCdCommand(stereo);
 		StereoOffWithCdCommand stereoOffWithCD=new StereoOffWithCdCommand(stereo);
@@ -30,15 +38,28 @@ public class RemoteLoader {
 		rc.setCommand(0, livingRoomLightOn, livingRoomLightOff);
 		rc.setCommand(1, kitchenLightOn, kitchenLightOff);
 		rc.setCommand(2, stereoOnWithCD, stereoOffWithCD);
+		rc.setCommand(3, garageDoorOpen, garageDoorOpen);
+		rc.setCommand(4, fanhigh, fanoff);
+		rc.setCommand(5, fanmedium, fanoff);
+		rc.setCommand(6, fanlow, fanoff);
 		
 		System.out.println(rc);
 		
 		rc.onButtonWasPushed(0);
-		rc.offButtonWasPushed(0);
+		//rc.offButtonWasPushed(0);
+		rc.undoButtomWasPressed();
 		rc.onButtonWasPushed(1);
-		rc.offButtonWasPushed(1);
+		//rc.offButtonWasPushed(1);
+		rc.undoButtomWasPressed();
 		rc.onButtonWasPushed(2);
 		rc.offButtonWasPushed(2);
+		rc.onButtonWasPushed(3);
+		rc.undoButtomWasPressed();
+		
+		rc.onButtonWasPushed(4);
+		rc.onButtonWasPushed(5);
+		rc.undoButtomWasPressed();
+		rc.onButtonWasPushed(6);
 	}
 
 }

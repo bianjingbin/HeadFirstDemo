@@ -23,6 +23,12 @@ public class StereoOnWithCdCommand implements Command{
 		st.setCD();
 		st.setVolume(11);
 	}
+
+	@Override
+	public void undo() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
 

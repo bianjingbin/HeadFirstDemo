@@ -22,6 +22,11 @@ public class LightOnCommand implements Command {
 		light.on();
 	}
 
+	@Override
+	public void undo() {
+		light.off();
+	}
+
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

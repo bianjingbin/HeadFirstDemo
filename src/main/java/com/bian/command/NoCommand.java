@@ -12,6 +12,12 @@ package com.bian.command;
 
 public class NoCommand implements Command{
 	public void execute() {}
+
+	@Override
+	public void undo() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

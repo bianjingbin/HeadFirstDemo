@@ -12,6 +12,7 @@ package com.bian.command;
 
 public interface Command {
 	public void execute();
+	public void undo();
 }
 
 /* Copyright (C) 2018, 上海金仕达卫宁软件科技有限公司 Project, All Rights Reserved. */

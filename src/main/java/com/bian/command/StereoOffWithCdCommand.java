@@ -21,6 +21,12 @@ public class StereoOffWithCdCommand implements Command{
 	public void execute() {
 		st.off();
 	}
+
+	@Override
+	public void undo() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
 
