@@ -3,23 +3,28 @@
  * (C)2018 Shanghai KingstarWinning Corporation. All rights reserved.
  * 项目名称： 规则引擎
  * 系统名称： ENGINE3.0
- * 文件名称： TDuck.java
+ * 文件名称： DuckAdapter.java
  * 注意事项：
- * Id: TDuck.java,v3.0 2018年11月22日 bianjingbin Exp
+ * Id: DuckAdapter.java,v3.0 2018年11月22日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.adapter.adapterexe1;
+package com.bian.adapter.adapterexe;
 
-public class TDuck implements Duck {
+public class DuckAdapter implements Turkey {
+	Duck duck;
+	
+	public DuckAdapter(Duck duck) {
+		this.duck=duck;
+	}
 
 	@Override
-	public void quack() {
-		System.out.println("呱呱叫");
+	public void gobble() {
+		duck.quack();
 	}
 
 	@Override
 	public void fly() {
-		System.out.println("飞行5米!");
+		duck.fly();
 	}
 
 }

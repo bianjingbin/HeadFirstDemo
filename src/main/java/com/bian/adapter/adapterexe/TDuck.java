@@ -3,28 +3,23 @@
  * (C)2018 Shanghai KingstarWinning Corporation. All rights reserved.
  * 项目名称： 规则引擎
  * 系统名称： ENGINE3.0
- * 文件名称： TTurkey.java
+ * 文件名称： TDuck.java
  * 注意事项：
- * Id: TTurkey.java,v3.0 2018年11月22日 bianjingbin Exp
+ * Id: TDuck.java,v3.0 2018年11月22日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.adapter.adapterexe1;
+package com.bian.adapter.adapterexe;
 
-public class TTurkey implements Turkey {
+public class TDuck implements Duck {
 
 	@Override
-	public void gobble() {
-		System.out.println("咯咯叫");
+	public void quack() {
+		System.out.println("呱呱叫");
 	}
 
 	@Override
 	public void fly() {
-		int j=0;
-		for (int i = 0; i < 5; i++) {
-			System.out.println("飞行1米!");
-			j++;
-		}
-		System.out.println("总计"+j+"米！");
+		System.out.println("飞行5米!");
 	}
 
 }

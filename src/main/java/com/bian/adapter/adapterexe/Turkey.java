@@ -8,7 +8,7 @@
  * Id: Turkey.java,v3.0 2018年11月22日 bianjingbin Exp
  * ==============================================
  */
-package com.bian.adapter.adapterexe1;
+package com.bian.adapter.adapterexe;
 
 public interface Turkey {
 	public void gobble();
