@@ -10,10 +10,34 @@
  */
 package com.javacore;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class HelloWorldTest {
 
 	public static void main(String[] args) {
-		System.out.println("Java核心技术也将开始~~~");
+		//System.out.println("Java核心技术也将开始~~~");
+		System.out.println(isValid("20070228"));
+	}
+	
+	public static boolean isValid(String dateStr) {
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
+		try {
+            //采用严格的解析方式，防止类似 “2017-05-35” 类型的字符串通过
+			sdf.setLenient(false);
+			sdf.parse(dateStr);
+            Date date = (Date)sdf.parse(dateStr);
+            //重复比对一下，防止类似 “2017-5-15” 类型的字符串通过
+            String newDateStr = sdf.format(date);
+            if(dateStr.equals(newDateStr)){
+                return true;
+            }else {
+                return false;
+            }
+        } catch (ParseException e) {
+            return false;
+        }
 	}
 
 }
